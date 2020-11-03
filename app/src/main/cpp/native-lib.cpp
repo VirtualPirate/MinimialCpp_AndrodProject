@@ -8,7 +8,7 @@
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_phantom_automath_MainActivity_stringFromJNI(
         JNIEnv* env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++ Bhosdike";
+        jobject obj) {
+    std::string hello = "Numbers: ";
     return env->NewStringUTF(hello.c_str());
 }
