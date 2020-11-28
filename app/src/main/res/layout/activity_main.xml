@@ -10,11 +10,11 @@
 		android:id="@+id/calc_btn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginRight="10dp"
-		android:layout_marginTop="47dp"
 		android:text="Calculate"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		android:onClick="btn_onClick"
+		app:layout_constraintBottom_toBottomOf="@+id/input_nums"
+		app:layout_constraintStart_toEndOf="@+id/input_nums"
+		app:layout_constraintTop_toTopOf="@+id/input_nums" />
 
 	<EditText
 		android:id="@+id/input_nums"
@@ -22,38 +22,43 @@
 		android:layout_height="wrap_content"
 		android:ems="10"
 		android:inputType="numberSigned"
-		app:layout_constraintBottom_toBottomOf="@+id/pow_switch"
-		app:layout_constraintEnd_toStartOf="@+id/pow_switch"
+		app:layout_constraintBottom_toBottomOf="@+id/sample_text"
 		app:layout_constraintStart_toEndOf="@+id/sample_text"
-		app:layout_constraintTop_toTopOf="@+id/calc_btn" />
+		app:layout_constraintTop_toTopOf="@+id/sample_text" />
 
 	<Switch
 		android:id="@+id/pow_switch"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
 		android:text="in powers"
-		app:layout_constraintEnd_toEndOf="@+id/calc_btn"
-		app:layout_constraintStart_toStartOf="@+id/calc_btn"
-		app:layout_constraintTop_toBottomOf="@+id/calc_btn" />
+		app:layout_constraintBottom_toBottomOf="@+id/calc_btn"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/calc_btn"
+		app:layout_constraintTop_toTopOf="@+id/calc_btn" />
 
 	<TextView
 		android:id="@+id/sample_text"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="10dp"
+		android:layout_margin="10dp"
 		android:padding="5dp"
 		android:text="Number"
-		app:layout_constraintBottom_toBottomOf="@+id/pow_switch"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.04"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="@+id/calc_btn" />
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.100000024" />
 
 	<WebView
+		android:id="@+id/webView2"
 		android:layout_width="match_parent"
 		android:layout_height="300dp"
+		android:layout_marginLeft="10dp"
 		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/pow_switch"
-		app:layout_constraintVertical_bias="0.100000024"
-		tools:layout_editor_absoluteX="1dp" />
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/input_nums"
+		app:layout_constraintVertical_bias="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
